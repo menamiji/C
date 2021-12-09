@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(void) {
-    printf("test2");
+    printf("ram");
     return 0;
 }
 
