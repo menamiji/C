@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(void) {
-    printf("lemon");
+    printf("main.c");
     return 0;
 }
 
