@@ -8,12 +8,12 @@ struct node {
 typedef struct node Node;
 
 void printNode(Node * top){
-    printf("[bottom]");
+    printf("[b]");
     while(top!=NULL) {
         printf("%d", top->value);
         top=top->link;
     }
-    printf("[top]\n");
+    printf("[t]\n");
 }
 
 Node * push(Node * top, int num){
