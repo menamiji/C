@@ -8,16 +8,18 @@ struct node {
 typedef struct node Node;
 
 void printNode(Node * top){
-    printf("[b]");
+    printf("[t]");
     while(top!=NULL) {
         printf("%d", top->value);
         top=top->link;
     }
-    printf("[t]\n");
+    printf("[b]\n");
 }
 
-Node * push(Node * top, int num){
+Node * push(Node * top){
+    int num;
     Node * temp = (Node *)malloc(sizeof(Node));
+    scanf("%d", &num);
     temp->value = num;
     temp->link = top;
     return temp;
@@ -37,20 +39,14 @@ int main(void) {
     while(1) {
         printf("0-종료, 1-입력, 2-삭제, 3-출력 : ");
         scanf("%d", &num);
-        
-        if(num==0) //종료
+        if(num==0)
             break;
-        else if(num==1){
-            top = push(top, num);
-            printNode(top);
-        }
-        else if(num==2){
+        else if(num==1)
+            top = push(top);
+        else if(num==2 && top!=NULL)
             top = pop(top);
-        }
-        else if(num==3){
+        else if(num==3)
             printNode(top);
-        }
     }
     return 0;
 }
-
